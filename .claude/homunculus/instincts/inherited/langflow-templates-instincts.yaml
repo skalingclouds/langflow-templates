@@ -1,0 +1,467 @@
+# Instincts generated from https://github.com/skalingclouds/langflow-templates
+# Generated: 2026-03-09T18:57:36.442Z
+# Version: 2.0
+
+---
+id: langflow-templates-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/langflow-templates
+---
+
+# Langflow Templates Commit Length
+
+## Action
+
+Keep commit messages concise (under 50 characters)
+
+## Evidence
+
+- Average commit message length: 43 chars
+- Based on 76 commits
+
+---
+id: langflow-templates-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/langflow-templates
+---
+
+# Langflow Templates Naming Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: snake_case
+
+---
+id: langflow-templates-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/langflow-templates
+---
+
+# Langflow Templates Export Style
+
+## Action
+
+Prefer mixed exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: mixed
+
+---
+id: langflow-templates-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/langflow-templates
+---
+
+# Langflow Templates Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: langflow-templates-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/langflow-templates
+---
+
+# Langflow Templates Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~22x per month
+- Files: **/*.test.*, **/api/**
+
+---
+id: langflow-templates-workflow-add-new-business-template
+trigger: "when doing add new business template"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/langflow-templates
+---
+
+# Langflow Templates Workflow Add New Business Template
+
+## Action
+
+Follow the add-new-business-template workflow:
+1. Create JSON template file in appropriate business_funcions subdirectory
+2. Update .DS_Store files for directory structure
+3. Sometimes add supporting files (PDFs, additional configs)
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~20x per month
+- Files: business_funcions/*/template_name.json, business_funcions/*/.DS_Store, *.pdf
+
+---
+id: langflow-templates-workflow-add-ai-pattern-template
+trigger: "when doing add ai pattern template"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/langflow-templates
+---
+
+# Langflow Templates Workflow Add Ai Pattern Template
+
+## Action
+
+Follow the add-ai-pattern-template workflow:
+1. Create JSON template file in ai_patterns subdirectory
+2. Update .DS_Store files
+3. Place in appropriate category (document_intelligence, web_&_workflow_automation, etc.)
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~8x per month
+- Files: ai_patterns/*/template_name.json, ai_patterns/*/.DS_Store
+
+---
+id: langflow-templates-workflow-update-marketing-content-templates
+trigger: "when doing update marketing content templates"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/langflow-templates
+---
+
+# Langflow Templates Workflow Update Marketing Content Templates
+
+## Action
+
+Follow the update-marketing-content-templates workflow:
+1. Modify existing JSON in marketing_content_creation directory
+2. Update .DS_Store files
+3. Sometimes add multiple related templates at once
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~6x per month
+- Files: business_funcions/sales_marketing_automation/marketing_content_creation/*.json, business_funcions/sales_marketing_automation/.DS_Store
+
+---
+id: langflow-templates-workflow-batch-template-addition
+trigger: "when doing batch template addition"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/langflow-templates
+---
+
+# Langflow Templates Workflow Batch Template Addition
+
+## Action
+
+Follow the batch-template-addition workflow:
+1. Create multiple JSON templates across different directories
+2. Update multiple .DS_Store files
+3. Organize templates by business function or AI pattern
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: business_funcions/*/*.json, ai_patterns/*/*.json, multiple .DS_Store files
+
+---
+id: langflow-templates-workflow-update-existing-template
+trigger: "when doing update existing template"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/skalingclouds/langflow-templates
+---
+
+# Langflow Templates Workflow Update Existing Template
+
+## Action
+
+Follow the update-existing-template workflow:
+1. Modify existing JSON template file
+2. Sometimes update associated .DS_Store files
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~8x per month
+- Files: existing template .json files
+
+---
+id: langflow-templates-snake-case-files
+trigger: "When creating or naming files"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: skalingclouds/langflow-templates
+---
+
+# Langflow Templates Snake Case Files
+
+## Action
+
+Use snake_case for file names
+
+## Evidence
+
+- Consistent snake_case in file structure
+- Pattern in marketing_content_creation.json and similar files
+
+---
+id: langflow-templates-json-template-structure
+trigger: "When creating a new template"
+confidence: 0.95
+domain: architecture
+source: repo-analysis
+source_repo: skalingclouds/langflow-templates
+---
+
+# Langflow Templates Json Template Structure
+
+## Action
+
+Create a JSON file with template configuration
+
+## Evidence
+
+- All templates are JSON files
+- 100% of template additions involve .json files
+
+---
+id: langflow-templates-feat-prefix-commits
+trigger: "When adding a new template or major feature"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: skalingclouds/langflow-templates
+---
+
+# Langflow Templates Feat Prefix Commits
+
+## Action
+
+Prefix commit message with 'feat:'
+
+## Evidence
+
+- feat: add teaching plan generator template
+- feat: add seo keyword research automation template
+- feat: add github issues to jira tickets template
+
+---
+id: langflow-templates-descriptive-commits
+trigger: "When committing template changes"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: skalingclouds/langflow-templates
+---
+
+# Langflow Templates Descriptive Commits
+
+## Action
+
+Use descriptive commit messages mentioning the template name
+
+## Evidence
+
+- Average commit length 43 chars
+- Specific template names in commits like 'teaching plan generator template'
+
+---
+id: langflow-templates-business-function-organization
+trigger: "When adding a business automation template"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: skalingclouds/langflow-templates
+---
+
+# Langflow Templates Business Function Organization
+
+## Action
+
+Place JSON file in appropriate business_funcions subdirectory
+
+## Evidence
+
+- 20x/month frequency for business template additions
+- Consistent business_funcions/* structure
+
+---
+id: langflow-templates-ai-pattern-categorization
+trigger: "When adding an AI workflow template"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: skalingclouds/langflow-templates
+---
+
+# Langflow Templates Ai Pattern Categorization
+
+## Action
+
+Place JSON file in ai_patterns with appropriate category (document_intelligence, web_&_workflow_automation)
+
+## Evidence
+
+- 8x/month AI pattern additions
+- Clear ai_patterns directory structure with categories
+
+---
+id: langflow-templates-marketing-specialization
+trigger: "When working on marketing automation templates"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: skalingclouds/langflow-templates
+---
+
+# Langflow Templates Marketing Specialization
+
+## Action
+
+Focus on sales_marketing_automation/marketing_content_creation directory
+
+## Evidence
+
+- 6x/month marketing template updates
+- Dedicated marketing_content_creation workflow pattern
+
+---
+id: langflow-templates-batch-template-efficiency
+trigger: "When adding multiple related templates"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: skalingclouds/langflow-templates
+---
+
+# Langflow Templates Batch Template Efficiency
+
+## Action
+
+Group multiple template additions in a single commit across directories
+
+## Evidence
+
+- 4x/month batch additions
+- Pattern of multiple .json files in single commits
+
+---
+id: langflow-templates-ds-store-maintenance
+trigger: "When adding or modifying templates in directories"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: skalingclouds/langflow-templates
+---
+
+# Langflow Templates Ds Store Maintenance
+
+## Action
+
+Update .DS_Store files alongside template changes
+
+## Evidence
+
+- Consistent .DS_Store updates in all workflow patterns
+- Always accompanied template additions
+
+---
+id: langflow-templates-iterative-updates
+trigger: "When improving existing templates"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: skalingclouds/langflow-templates
+---
+
+# Langflow Templates Iterative Updates
+
+## Action
+
+Modify existing JSON template files directly
+
+## Evidence
+
+- 8x/month template updates
+- Pattern of modifying existing .json files
+
+---
+id: langflow-templates-mixed-imports
+trigger: "When writing TypeScript imports"
+confidence: 0.6
+domain: code-style
+source: repo-analysis
+source_repo: skalingclouds/langflow-templates
+---
+
+# Langflow Templates Mixed Imports
+
+## Action
+
+Use mixed import styles as appropriate for the context
+
+## Evidence
+
+- Mixed import style detected in codeStyle analysis
+
+---
+id: langflow-templates-template-first-architecture
+trigger: "When structuring the repository"
+confidence: 0.9
+domain: architecture
+source: repo-analysis
+source_repo: skalingclouds/langflow-templates
+---
+
+# Langflow Templates Template First Architecture
+
+## Action
+
+Organize by template categories (business_funcions, ai_patterns) rather than technical layers
+
+## Evidence
+
+- Primary folder structure is business_funcions and ai_patterns
+- Template-centric organization pattern
+
